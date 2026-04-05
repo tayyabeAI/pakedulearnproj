@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UrduAI Vibe Coding Class</title>
+    <title>UrduAI Vibe - Home</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -13,7 +14,7 @@
             <div class="container">
                 <a href="index.html" class="logo">UrduAI Vibe</a>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="students.html">Students</a></li>
                     <li><a href="courses.html">Courses</a></li>
                     <li><a href="softwares.html">Softwares</a></li>
@@ -21,23 +22,42 @@
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
             </div>
         </nav>
     </header>
+    <main class="container">
+        <section class="main-content">
+            <h1>Welcome to UrduAI Vibe</h1>
+            <p>Your one-stop destination for learning AI in Urdu.</p>
+        </section>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="typing-effect"></h1>
+        <section class="features-section">
+            <div class="feature">
+                <i class="fas fa-eye"></i>
+                <div class="feature-title">Visitors</div>
+                <div id="visitor-counter">0</div>
+            </div>
+            <div class="feature">
+                <i class="fas fa-heart"></i>
+                <div class="feature-title">Likes</div>
+                <div id="like-counter">0</div>
+                <button id="like-button">Like</button>
             </div>
         </section>
-    </main>
 
+        <section class="comment-section">
+            <h3>Leave a Comment</h3>
+            <form id="comment-form">
+                <input type="text" id="comment-name" placeholder="Your Name" required>
+                <textarea id="comment-text" rows="4" placeholder="Your Comment" required></textarea>
+                <button type="submit">Post Comment</button>
+            </form>
+            <div id="comments-list"></div>
+        </section>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="/__/firebase/init.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
